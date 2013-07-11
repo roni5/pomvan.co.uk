@@ -1,0 +1,229 @@
+http://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans
+
+<link href="http://fnt.webink.com/wfs/webink.css?project=732093DC-A632-4117-9621-BC5FF56B7932&fonts=37437296-19E9-5916-9448-2D4ADE086DC5:family=AdelleWeb-Regular:style=normal:weight=normal" rel="stylesheet" type="text/css"/>
+<div style="font-family: 'AdelleWeb-Regular';">
+	<h1 style="font-size: 36px;">Adelle Web Regular</h1>
+	<p style="font-size: 24px;">Forsaking monastic tradition, twelve jovial friars gave up their vocation for a questionable existence on the flying trapeze. The public was amazed to view the quickness and dexterity of the juggler. We quickly seized the black axle and just saved it from going past him. A mad boxer shot a quick, gloved jab to the jaw of his dizzy opponent. Six javelins thrown by the quick savages whizzed forty paces beyond the mark. We promptly judged antique ivory buckles for the next prize.</p><span style="font: 80%/1.4 sans-serif; color: #444; display: block;">Paragraph is set for minimum recommended pixel size of 24px</span>
+</div>
+
+<link href="http://fnt.webink.com/wfs/webink.css?project=732093DC-A632-4117-9621-BC5FF56B7932&fonts=37437296-19E9-5916-9448-2D4ADE086DC5:family=AdelleWeb-Regular:style=normal:weight=normal" rel="stylesheet" type="text/css"/>
+
+<style type="text/css">@import url("http://fnt.webink.com/wfs/webink.css?project=732093DC-A632-4117-9621-BC5FF56B7932&fonts=37437296-19E9-5916-9448-2D4ADE086DC5:family=AdelleWeb-Regular:style=normal:weight=normal");</style>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Making the Web Beautiful!</div>
+  </body>
+</html>
+
+body {
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+http://fonts.googleapis.com/css?family=Inconsolata&text=Hello
+ As with all query strings, you should URL-encode the value:
+
+http://fonts.googleapis.com/css?family=Inconsolata&text=Hello%20World
+
+http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple
+
+#####not windows thou
+
+
+Getting Started
+
+This guide explains how to use the Google Fonts API to add fonts to your web pages. You don't need to do any programming; all you have to do is add a special stylesheet link to your HTML document, then refer to the font in a CSS style.
+Contents
+
+    A quick example
+    Overview
+    Specifying font families and styles in a stylesheet URL
+    Specifying script subsets
+    Optimizing your font requests (Beta)
+    Enabling font effects (Beta)
+    Further reading
+
+A quick example
+
+Here's an example. Copy and paste the following HTML into a file:
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Making the Web Beautiful!</div>
+  </body>
+</html>
+
+Then open the file in a modern web browser. You should see a page displaying the following, in the font called Tangerine:
+Making the Web Beautiful!
+
+That sentence is ordinary text, so you can change how it looks by using CSS. Try adding a shadow to the style in the previous example:
+
+body {
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+You should now see a drop shadow under the text:
+Making the Web Beautiful!
+
+And that's only the beginning of what you can do with the Fonts API and CSS.
+Overview
+
+You can start using the Google Fonts API in just two steps:
+
+    Add a stylesheet link to request the desired web font(s):
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Font+Name">
+
+    Style an element with the requested web font, either in a stylesheet:
+
+    CSS selector {
+      font-family: 'Font Name', serif;
+    }
+
+    or with an inline style on the element itself:
+
+    <div style="font-family: 'Font Name', serif;">Your text</div>
+
+Note: When specifying a web font in a CSS style, always list at least one fallback web-safe font in order to avoid unexpected behaviors. In particular, add a CSS generic font name like serif or sans-serif to the end of the list, so the browser can fall back to its default fonts if need be.
+
+For a list of fonts you can use, see Google Fonts.
+Specifying font families and styles in a stylesheet URL
+
+To determine what URL to use in your stylesheet link, start with the Google Fonts API base URL:
+
+http://fonts.googleapis.com/css
+
+Then, add the family= URL parameter, with one or more font family names and styles.
+
+For example, to request the Inconsolata font:
+
+http://fonts.googleapis.com/css?family=Inconsolata
+
+Note: Replace any spaces in the font family name with plus signs (+).
+
+To request multiple font families, separate the names with a pipe character (|).
+
+For example, to request the fonts Tangerine, Inconsolata, and Droid Sans:
+
+http://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans
+
+Requesting multiple fonts allows you to use all of those fonts in your page. (But don't go overboard; most pages don't need very many fonts, and requesting a lot of fonts may make your pages slow to load.)
+
+The Google Fonts API provides the regular version of the requested fonts by default. To request other styles or weights, append a colon (:) to the name of the font, followed by a list of styles or weights separated by commas (,).
+
+For example:
+
+http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans
+
+To find out which styles and weights are available for a given font, see the font's listing in Google Fonts.
+
+For each style you request, you can give either the full name or an abbreviation; for weights, you can alternatively specify a numerical weight:
+Style 	Specifiers
+italic 	italic or i
+bold 	bold or b or a numerical weight such as 700
+bold italic 	bolditalic or bi
+
+For example, to request Cantarell italic and Droid Serif bold, you could use any of the following URLs:
+
+http://fonts.googleapis.com/css?family=Cantarell:italic|Droid+Serif:bold
+
+http://fonts.googleapis.com/css?family=Cantarell:i|Droid+Serif:b
+
+http://fonts.googleapis.com/css?family=Cantarell:i|Droid+Serif:700
+
+Specifying script subsets
+
+Some of the fonts in the Google Font Directory support multiple scripts (like Latin and Cyrillic for example). In order to specify which subsets should be downloaded the subset parameter should be appended to the URL.
+
+For example, to request the Cyrillic subset of the Philosopher font, the URL would be:
+
+http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic
+
+To request both the Latin and Cyrillic subset of the Philosopher font, the URL would be:
+
+http://fonts.googleapis.com/css?family=Philosopher&subset=latin,cyrillic
+
+For a complete list of available fonts and font subsets please see Google Fonts.
+Optimizing your font requests (Beta)
+
+Oftentimes, when you want to use a web font on your website or application, you know in advance which letters you'll need. This often occurs when you're using a web font in a logo or heading.
+
+In these cases, you should consider specifying a text= value in your font request URL. This allows Google to return a font file that's optimized for your request. In some cases, this can reduce the size of the font file by up to 90%.
+
+To use this new beta feature, simply add text= to your Google Fonts API requests. For example if you're only using Inconsolata for the title of your blog, you can put the title itself as the value of text=. Here is what the request would look like:
+
+http://fonts.googleapis.com/css?family=Inconsolata&text=Hello
+
+As with all query strings, you should URL-encode the value:
+
+http://fonts.googleapis.com/css?family=Inconsolata&text=Hello%20World
+
+This feature also works for international fonts, allowing you to specify UTF-8 characters. For example, ¡Hola! is represented as:
+
+http://fonts.googleapis.com/css?family=Inconsolata&text=%c2%a1Hola!
+
+Note: there's no need to specify the subset= parameter when using text= as it allows you to refer to any character in the original font.
+Enabling font effects (Beta)
+
+When making headers or display texts on your website, you'll often want to stylize your text in a decorative way. To simplify your work, Google has provided a collection of font effects that you can use with minimal effort to produce beautiful display text. For example:
+This is a font effect!
+
+To use this new beta feature, simply add effect= to your Google Fonts API request and add the corresponding class name to the HTML element(s) that you want to affect. In our example above, we used the shadow-multiple font effect, so the request would look like:
+
+http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple
+
+To use the effect, add the corresponding class name to your HTML element(s). The corresponding class name is always the effect name prefixed with font-effect-, so the class name for shadow-multiple would be font-effect-shadow-multiple:
+
+<div class="font-effect-shadow-multiple">This is a font effect!<div>
+
+You can request multiple effects by separating the effect names with a pipe character (|).
+
+http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float
+
+Here is a complete listing of all the font effects that we offer: 
+
+90%.
+
+To use this new beta feature, simply add text= to your Google Fonts API requests. For example if you're only using Inconsolata for the title of your blog, you can put the title itself as the value of text=. Here is what the request would look like:
+
+http://fonts.googleapis.com/css?family=Inconsolata&text=Hello
+
+As with all query strings, you should URL-encode the value:
+
+http://fonts.googleapis.com/css?family=Inconsolata&text=Hello%20World
+
+
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }
+	  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	  h1 { font-family: ‘Metrophobic’, Arial, serif; font-weight: 400; }
+	  
+	  font-family: 'Droid Sans', sans-serif;

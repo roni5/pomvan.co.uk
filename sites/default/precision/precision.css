@@ -1,0 +1,620 @@
+/* $Id: precision.css,v 1.1.2.1 2010/10/12 12:27:47 dixon Exp $    Droid Sans */
+
+
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('sites/default/themes/precision/css/fonts/droidsans-webfont.eot');
+    src: url('../sites/default/themes/precision/css/fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../sites/default/themes/precision/css/fonts/droidsans-webfont.woff') format('woff'),
+         url('../fonts/droidsans-webfont.ttf') format('truetype'),
+         url('C:\pom\sites\default\themes\precision\css\fonts\droidsans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'droid_sansbold';
+    src: url('/pom/sites/default/themes/precision/css/fonts/droidsans-bold-webfont.eot');
+    src: url('../sites/default/themes/precision/css/fonts/droidsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../sites/default/themes/precision/css/fonts/droidsans-bold-webfont.woff') format('woff'),
+         url('../sites/default/themes/precision/css/fonts/droidsans-bold-webfont.ttf') format('truetype'),
+         url('pom/sites/default/themes/precision/css/fonts/droidsans-bold-webfont.svg#droid_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*/
+
+}
+body {
+background: #9394A5;
+color:#323232;
+font:12px droidsans-webfont,sans-serif;
+margin:0;
+padding:0;
+}
+input {
+color:#494949;
+font:12px droidsans-webfont,sans-serif;
+}
+textarea, select {
+color:#494949;
+font:12px droidsans-webfont,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family:'droid_sansbold',Arial,sans-serif;
+font-weight:normal;
+margin:10px;
+padding:0;
+}
+h1 {
+	border-bottom: 2px solid #A3452B;
+    color: #F4CE1;
+    font-family: droidsans-bold;
+    font-size: 60px;
+    line-height: 40px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+h2 {
+font-size:24px;
+line-height:24px;
+}
+h3 {
+font-size:30px;
+line-height:24px;
+margin-bottom:15px;
+margin-top:10px;
+}
+h4 {
+font-size:24px;
+font-weight:bold;
+}
+h5 {
+font-size:24px;
+}
+h6 {
+font-size:24px;
+margin-bottom:15px;
+text-align:justify;
+}
+ul, quote, code, fieldset {
+margin:0.5em 0;
+}
+p {
+
+	font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding-bottom: 0;
+    text-transform: none;
+	font-family: 'droid_sansregular', Arial, sans-serif;
+}
+div.odd {
+background-color:#F2F2F2;
+padding:10px;
+}
+div.even {
+background-color:#F9F9F9;
+padding:10px;
+}
+div.list-odd {
+border-bottom: 1px dashed #ccc;
+padding: 2px 0px 2px 0px;
+}
+div.list-even {
+border-bottom: 1px dashed #ccc;
+padding: 2px 0px 2px 0px;
+}
+
+
+div.warning, tr.warning {
+margin:5px;
+}
+
+a:link, a:visited {
+color:#F7FBFF;
+text-decoration:none;
+}
+a:hover {
+color:#2e634c;
+text-decoration:underline;
+}
+a:active, a.active {
+color:#2e634c;
+}
+
+li.leaf {
+list-style-image:none !important;
+list-style-type:none;
+list-style: none;
+}
+#user-login-form {
+    text-align: left;
+	
+}
+
+#admin-menu {
+    opacity: 0.8;
+	z-index:100;
+}
+
+/* #9394A5 */
+ul.primary {
+    border-bottom: 0 solid #9394A5;
+    padding: 0;
+	list-style: none;
+}
+ul.primary li.active a {
+    background-color: #999;
+    border: 0 solid #BBBBBB;
+    color: #FFFFFF;
+    padding: 4px 15px;
+}
+ul.primary li a {
+    background-color: #968FA1;
+    border: 0px solid #BBBBBB;
+    color: #FFFFFF;
+    padding: 4px 15px;
+}
+ul.primary li a:hover {
+    background-color: #999;
+    border: 0px solid #BBBBBB;
+    color: #FFFFFF;
+    padding: 4px 15px;
+}
+
+table a, table a:link, table a:visited {
+    border: medium none;
+}
+img {
+    border: 0 none;
+    margin-top: -1px;
+}
+
+
+}
+table {
+    border-collapse: collapse;
+    border-right: 1px solid #E5EFF8;
+    border-top: 1px solid #E5EFF8;
+    margin: 1em auto;
+    width: 100%;
+}
+caption {
+    caption-side: top;
+    color: #9BA9B4;
+    font-size: 0.94em;
+    letter-spacing: 0.1em;
+    margin: 1em 0 0;
+    padding: 0;
+    text-align: center;
+}
+tr.odd td {
+    background: none repeat scroll 0 0 #F7FBFF;
+}
+tr.odd .column1 {
+    background: none repeat scroll 0 0 #F4F9FE;
+}
+.column1 {
+    background: none repeat scroll 0 0 #F9FCFE;
+}
+td {
+    border-bottom: 1px solid #E5EFF8;
+    border-left: 1px solid #E5EFF8;
+    color: #678197;
+    padding: 0.5em 2em;
+    text-align: left;
+	vertical-align:top;
+}
+th {
+    border-bottom: 1px solid #E5EFF8;
+    border-left: 1px solid #E5EFF8;
+    color: #678197;
+    font-weight: normal;
+    padding: 0.3em 1em;
+    text-align: left;
+}
+thead th {
+    background: none repeat scroll 0 0 #F4F9FE;
+    color: #66A3D3;
+    font: bold 1.2em/2em "Century Gothic","Trebuchet MS",Arial,Droid Sans,sans-serif;
+    text-align: center;
+}
+tfoot th {
+    background: none repeat scroll 0 0 #F4F9FE;
+    text-align: center;
+}
+tfoot th strong {
+    color: #66A3D3;
+    font: bold 1.2em "droidsans-webfont","Trebuchet MS",Arial,Droid Sans,sans-serif;
+    margin: 0.5em 0.5em 0.5em 0;
+}
+tfoot th em {
+    color: #F03B58;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+	
+}
+
+/*ul.links li {
+display:none;
+}*/
+
+/*  Main Section Panels CSS
+/************  background-color: #FFF;  background:url("sites/default/themes/precision/page-top.png") no-repeat scroll 0 0 #FFF; ***************************/
+/* background:url("sites/default/themes/precision/batthern.png") 
+     background-repeat: repeat-x; */
+#panel-header.panel-pane {
+
+    margin: 0px auto ;
+    padding: 0px 0px 0px 0px;
+    width: 980px;
+    height: 89px;	
+	border-left: 10px solid #C5C6D1;
+	border-right: 10px solid #C5C6D1;
+	border-top: 10px solid #000000;
+
+}
+
+#panel-header.panel-pane {
+	-moz-border-radius-topleft:32px;
+	 border-top-left-radius: 32px;
+	 border-top-right-radius:32px;
+	-moz-border-radius-topright:32px;
+	-webkit-border-top-left-radius:32px;
+	-webkit-border-top-right-radius:32px;
+}
+
+
+#panel-logo.panel-pane {
+    margin-right: 10px;
+ 
+}
+#panel-blog-photo.panel-pane {
+    float:left;
+	padding-left:8px;
+	padding-bottom:8px;
+ 
+}
+#panel-toptext.panel-pane {
+    float:right;
+ 
+}
+
+#panel-messages.panel-pane {
+    margin: 0px auto 0px;
+    padding: 2px 15px 15px 15px;
+    width: 970px;
+	background-color: #FFFFFF;
+	border-left: 10px solid #9dbc93;
+	border-right: 10px solid #9dbc93;
+}
+
+/*      background:url("sites/default/themes/precision/batthern.png.png") background-repeat: repeat-x;*/
+#panel-content.panel-pane {
+  
+    
+	background-color: #FFFFFF;   
+    border-left: 10px solid #C5C6D1;
+    border-right: 10px solid #C5C6D1;
+    margin: 0px auto ;
+    min-height: 300px;
+    padding: 0px;
+    width: 980px;
+}
+
+#panel-content.panel-pane {
+	-moz-border-radius-bottomleft:0ex;
+	-moz-border-radius-bottomright:0ex;
+	-webkit-border-bottom-left-radius:0ex;
+	-webkit-border-bottom-right-radius:0ex;
+}
+
+#panel-cover-photo.panel-pane {
+    margin: 0px 0px 0px 0px;
+}
+
+#panel-top-quote.panel-pane p {
+    color: #444444;
+    font-size: 18px;
+    margin-top: 40px;
+    padding-right: 11px;
+    text-align: right;
+}
+#panel-top-number.panel-pane p {
+    color: #A3452B;
+    font-size: 30px;
+    letter-spacing: 2.7px;
+    line-height: 30px;
+    margin-top: 0px;
+    padding-right: 7px;
+    text-align: right;
+}
+
+#panel-sidebar.panel-pane {
+    background-color: #F8F8F8;
+    border: 1px solid #B2ADA13;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#panel-sidebar-button.panel-pane {
+    padding-left:5px;
+}
+
+
+#panel-questions-title.panel-pane p{
+    color: #A3452B;
+    font-size: 20px;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+#panel-questions-body.panel-pane p{
+    font-size: 14px;
+    padding: 5px 10px;
+    text-align: justify;
+}
+#panel-quote-body.panel-pane p{
+    font-size: 14px;
+    padding: 0px 10px;
+}
+
+#panel-footer-title.panel-pane {
+    border-bottom: 1px dashed #B2ADA1;
+    margin-top: -10px;
+    padding: 0;
+    padding-bottom: 20px;
+    margin-right: 54px;
+}
+#panel-footer-title.panel-pane p {
+    color: #B2ADA1;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#panel-footer-body.panel-pane {
+    padding:0px;
+    height: 150px;
+	margin-top:10px;
+}
+#panel-footer-body.panel-pane a{
+    color: #EEEEEE;
+	
+}
+#panel-footer-body.panel-pane ul li {
+    background: none repeat scroll 0 0 transparent
+
+}
+
+#panel-footer-body.panel-pane ul.links li {
+    display: none;
+}
+#panel-footer-copyright.panel-pane {
+	color:#EEE;
+	font-size:12px;
+}
+
+#panel-footer.panel-pane {
+    background-color: #EEEEEE;
+    font-size: 12px;
+    margin: -10px auto 0;
+    padding: 25px;
+    width: 950px;
+	border-left: 10px solid #C5C6D1;
+    border-right: 10px solid #C5C6D1;
+	border-bottom: 10px solid #C5C6D1;
+	
+	-moz-border-radius-bottomleft:0ex;
+	-moz-border-radius-bottomright:0ex;
+	-webkit-border-bottom-left-radius:0ex;
+	-webkit-border-bottom-right-radius:0ex;
+}
+
+#panel-footer.panel-pane p{
+	padding-left: 0px
+}
+
+#panel-badge.panel-pane {
+    background-color: #eff7eb;
+	margin: -10px auto 0px auto;
+	padding: 5px 25px 5px 25px;
+    font-size: 12px;
+    width: 950px;
+	border-left: 10px solid #9DBC93;
+    border-right: 10px solid #9DBC93;
+	height: 100px;
+}
+#panel-badge-title.panel-pane p {
+	font-size: 18px;
+	color: #444;
+	text-transform: uppercase;
+}
+
+#panel-badge-body.panel-pane p {
+	font-size: 12px;
+	color: #777;
+	text-align: justify;
+	padding-right:15px;
+}
+
+
+#panel-badge2.panel-pane {
+    background-color: #EFF7EB;
+    border-left: 10px solid #9DBC93;
+    border-right: 10px solid #9DBC93;
+    border-top: 1px dashed #BBBBBB;
+    font-size: 12px;
+    height: 185px;
+    margin: -10px auto 0;
+    padding: 5px 25px;
+    width: 950px;
+}
+#panel-badge2-title.panel-pane p {
+	font-size: 18px;
+	color: #444;
+	text-transform: uppercase;
+}
+
+#panel-badge2-body.panel-pane p {
+	font-size: 12px;
+	color: #777;
+	text-align: justify;
+	padding-right:15px;
+}
+/*  Main Menu CSS
+/***************************************/
+
+#panel-menu.panel-pane ul.menu {
+    list-style-type: none !important;
+    padding-left: 26px;
+    padding-top: 0px;
+	
+}
+
+#panel-menu.panel-pane ul.links li {
+    display: none;
+	
+}
+/* #9394A5    background:url("sites/default/themes/precision/page-mid.png") no-repeat scroll 0 0 #EEEEEE;                       */
+/*     background:url("sites/default/themes/precision/batthern.png.png") 
+    background-repeat: repeat-x;    ... background: none repeat scroll 0 0 #3E3E3E;   ... background: -moz-linear-gradient(top, #9394A5, #EEE);*/
+ /*   background: none repeat scroll 0 0 #3E3E3E; */      
+#panel-menu.panel-pane {
+     text-decoration: none;
+	 background: none repeat scroll 0 0 transparent;
+    font-family: "Droid Sans",Droid Sans,Arial,sans-serif;
+	border-left: 10px solid #000000;
+	border-right: 10px solid #000000;
+    height: 40px;
+    margin: -1px auto;
+    padding-top: 7px;
+    width: 980px;
+	clear: both;
+	
+	
+}
+#panel-menu.panel-pane ul li {
+    text-decoration: none;
+    float: left;
+    padding-right: 1em;
+    margin-right: 1em;
+    border-right: 2px solid #FFF;
+    height: 20px;
+    line-height: 8px;
+}
+
+#panel-menu.panel-pane ul li:last-child {
+    border-right: none;
+	text-decoration: none;
+}
+	
+#panel-menu.panel-pane ul li a {
+    color: #FFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+	line-height:18px;
+}
+#panel-menu.panel-pane ul li a:hover {
+    color: #9DBC93;
+}
+
+#panel-menu.panel-pane ul a.active {
+     border: 1px solid #CCC;
+    color: #000000;
+	background: #DDD;
+}
+
+/*  Services Menu CSS  overflow:hidden;
+/***************************************/
+/*
+#panel-menu-services.panel-pane ul.links li {
+    display: none;
+}
+#panel-menu-services.panel-pane {
+    background: url("services.jpg") no-repeat scroll right center transparent;
+    color: #A3452B;
+    font-size: 14px;
+    height: 125px;
+    letter-spacing: 0.1em;
+    padding-left: 8px;
+    padding-right: 30px;
+}
+#panel-menu-services.panel-pane a {
+    color: #A3452B;
+    padding: 3px 10px;
+}
+#panel-menu-services.panel-pane a:hover {
+    background-color: #A3452B;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#panel-menu-services.panel-pane a:active {
+    background-color: #CCCCCC;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#panel-menu-services.panel-pane ul li {
+    background: none repeat scroll 0 0 transparent;
+    text-align: right;
+    margin-top: -5px;
+    line-height: 25px;
+	
+}
+*/
+#panel-menu-title.panel-pane p {
+    color: #DE0909;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+
+#panel-menu-sidebar.panel-pane ul.links li {
+    display: none;
+}
+
+#panel-menu-sidebar.panel-pane ul.menu {
+   padding:5px;
+}
+#panel-menu-sidebar.panel-pane {
+
+    color: #444;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+#panel-menu-sidebar.panel-pane a {
+    color: #444;
+}
+#panel-menu-sidebar.panel-pane a:hover {
+    color: #A3452B;
+    text-decoration: none;
+}
+#panel-menu-sidebar.panel-pane a:active {
+    color: #A3452B;
+    text-decoration: none;
+}
+#panel-menu-sidebar.panel-pane ul li {
+    background: none repeat scroll 0 0 transparent;
+	
+}
+
+#panel -img {
+    margin-top: 2.5em;
+	
+/*  Text Panel CSS
+/***************************************/
+
+#panel-titletext.panel-pane {
+    color: #354B55;
+    font-family: 'droid_sansbold',sans-serif;
+    font-size: 38px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}

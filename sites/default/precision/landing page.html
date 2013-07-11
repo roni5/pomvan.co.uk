@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Font Face Demo</title>
+	<style type="text/css" media="screen">
+
+	/*
+		Some basic page setup styles, you can ignore these
+	*/
+
+	html{background:#eee;color:#333;font:75%/1.5 Arial,sans-serif;/* 12px */}
+	body{width:540px;padding:20px;margin:50px auto;background:#fff;
+	-moz-box-shadow:0 0 10px rgba(0,0,0,.15);/* FF3.5+ */
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,.15);/* Saf3.0+,Chrome */
+	box-shadow:0 0 10px rgba(0,0,0,.15);/* Opera 10.5,IE 9.0 */}
+	a,a:link,a:visited{color:#069;}
+	a:hover,a:focus,a:active{color:#c00;}
+	h1,h2{font-family:Ubuntu,arial,sans-serif;}
+	h1{margin-top:0;}
+	h2{margin-top:1.25em;}
+	p{margin-bottom:0;}
+	hr{margin:1em 0;}
+	code,kbd,samp,tt,pre{font-family:Inconsolata,Consolas,Monaco,"Andale Mono",monospace;line-height:1;}
+	.demo,.unstyled{font-size:18px;}
+
+	/*
+		The wrong way: Each font is defined as a new font-family
+
+		Note that each @font-face declaration sets a unique font-family, and all
+		set font-weight and font-style to normal. This is how I got the CSS from
+		font-squirrel. Not to pick on them - WebINK and others do the same thing.
+	*/
+
+	@font-face {
+		font-family: 'UbuntuRegular';
+		src: url('Ubuntu-R-webfont.eot');
+		src: local('?'), url('Ubuntu-R-webfont.woff') format('woff'), url('Ubuntu-R-webfont.ttf') format('truetype'), url('Ubuntu-R-webfont.svg#webfontcceGD1qN') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'UbuntuItalic';
+		src: url('Ubuntu-I-webfont.eot');
+		src: local('?'), url('Ubuntu-I-webfont.woff') format('woff'), url('Ubuntu-I-webfont.ttf') format('truetype'), url('Ubuntu-I-webfont.svg#webfontPxVORYT4') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'UbuntuBold';
+		src: url('Ubuntu-B-webfont.eot');
+		src: local('?'), url('Ubuntu-B-webfont.woff') format('woff'), url('Ubuntu-B-webfont.ttf') format('truetype'), url('Ubuntu-B-webfont.svg#webfontssbCkuz5') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'UbuntuBoldItalic';
+		src: url('Ubuntu-BI-webfont.eot');
+		src: local('?'), url('Ubuntu-BI-webfont.woff') format('woff'), url('Ubuntu-BI-webfont.ttf') format('truetype'), url('Ubuntu-BI-webfont.svg#webfont3JT5vc7d') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	/*
+		The right way: Each font is defined as a style of a single font-family
+
+		The difference is that all these @font-face declarations define the same
+		font-family, and properly set the font-weight and font-style attributes.
+	*/
+
+	@font-face {
+		font-family: 'Ubuntu';
+		src: url('Ubuntu-R-webfont.eot');
+		src: local('?'), url('Ubuntu-R-webfont.woff') format('woff'), url('Ubuntu-R-webfont.ttf') format('truetype'), url('Ubuntu-R-webfont.svg#webfontcceGD1qN') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Ubuntu';
+		src: url('Ubuntu-I-webfont.eot');
+		src: local('?'), url('Ubuntu-I-webfont.woff') format('woff'), url('Ubuntu-I-webfont.ttf') format('truetype'), url('Ubuntu-I-webfont.svg#webfontPxVORYT4') format('svg');
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: 'Ubuntu';
+		src: url('Ubuntu-B-webfont.eot');
+		src: local('?'), url('Ubuntu-B-webfont.woff') format('woff'), url('Ubuntu-B-webfont.ttf') format('truetype'), url('Ubuntu-B-webfont.svg#webfontssbCkuz5') format('svg');
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Ubuntu';
+		src: url('Ubuntu-BI-webfont.eot');
+		src: local('?'), url('Ubuntu-BI-webfont.woff') format('woff'), url('Ubuntu-BI-webfont.ttf') format('truetype'), url('Ubuntu-BI-webfont.svg#webfont3JT5vc7d') format('svg');
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	/*
+		Now we'll set up the font declarations for each section
+	*/
+
+	/*
+		set the base font for the 'problem' section using one of the improperly
+		set up @font-face declarations from the "wrong" section above, but don't
+		create any bold or italic styles, to trigger the faux browser styles.
+	*/
+	.problem .demo {
+		font-family: UbuntuRegular, arial, sans-serif;
+	}
+
+
+	/*
+		set the base font for the 'worst' section using one of the improperly
+		set up @font-face declarations from the "wrong" section above, and also
+		override nested bold and italic elements with separate fonts, but don't
+		reset font-weight or font-style, to trigger the faux browser styles.
+	*/
+	.worst .demo {
+		font-family: UbuntuRegular, arial, sans-serif;
+	}
+	/* now override the bold and italic fonts */
+	.worst .demo em {
+		font-family: UbuntuItalic, arial, sans-serif;
+	}
+	.worst .demo strong {
+		font-family: UbuntuBold, arial, sans-serif;
+	}
+	.worst .demo strong em {
+		font-family: UbuntuBoldItalic, arial, sans-serif;
+	}
+
+
+	/*
+		set the base font for the 'wrong' section using one of the improperly
+		set up @font-face declarations from the "wrong" section above, and also
+		override nested bold and italic elements with separate fonts, and reset
+		font-weight and font-style, to avoid the faux browser styles.
+	*/
+	.wrong .demo {
+		font-family: UbuntuRegular, arial, sans-serif;
+	}
+	/* now override the bold and italic fonts and styles */
+	.wrong .demo em {
+		font-family: UbuntuItalic, arial, sans-serif;
+		font-style: normal;
+	}
+	.wrong .demo strong {
+		font-family: UbuntuBold, arial, sans-serif;
+		font-weight: normal;
+	}
+	.wrong .demo strong em {
+		font-family: UbuntuBoldItalic, arial, sans-serif;
+		font-style: normal;
+		font-weight: normal;
+	}
+
+
+	/*
+		set the base font for the 'right' section using the properly set up
+		@font-face declaration from the "right" section above, but don't
+		create any bold or italic styles, to allow the browser to automatically
+		grab the styles defined in the @font-face declarations.
+	*/
+	.right .demo {
+		font-family: Ubuntu, arial, sans-serif;
+	}
+
+	/*
+		Manually set the font back to Arial for the "unstyled" sections to 
+		simulate the font failing to load for some reason.
+	*/
+	.problem .unstyled,
+	.worst .unstyled,
+	.worst .unstyled em,
+	.worst .unstyled strong,
+	.worst .unstyled strong em,
+	.wrong .unstyled,
+	.wrong .unstyled em,
+	.wrong .unstyled strong,
+	.wrong .unstyled strong em,
+	.right .unstyled {
+		font-family: arial, sans-serif;
+	}
+
+	</style>
+</head>
+<body>
+
+	<h1>How to properly use @font-face to avoid faux-italic and bold browser styles</h1>
+	<p>See the <a href="http://spaceninja.com/2010/11/font-face-faux-styles/">full blog post</a> for a more detailed explanation.</p>
+
+	<div class="problem">
+		<h2>The Problem</h2>
+		<p>If you just apply a single font to a site without creating any additional styles for the bold and italic fonts, then the browser will automatically create 'faux' bold and italics for you, as seen in this demo. Note the second paragraph, which simulates what happens if the font fails to load, still has appropriate bolds and italics.</p>
+		<p>Note: I know the difference between the real fonts and the faux styles are subtle. Try comparing this sample to the other solutions. In particular, you can see that the lower-case letter 'a' in the italic sample is different in the true font. Also the faux-bold works by stretching the text horizontally, resulting in wide vertical strokes and thin horizontal strokes. Compare to the true font, and you'll see the bold style is a more consistent stroke thickness.</p>
+		<p class="demo">Lorem ipsum dolor <strong>bold sample</strong> sit <em>italic sample</em> amet consectetur adipisicing sed <strong><em>bold italic sample</em></strong> do eiusmod.</p>
+		<p class="demo unstyled">Lorem ipsum dolor <strong>bold sample</strong> sit <em>italic sample</em> amet consectetur adipisicing sed <strong><em>bold italic sample</em></strong> do eiusmod.</p>
+	</div>
+
+	<div class="worst">
+		<h2>The Worst Solution</h2>
+		<p>The way most font-face services provide CSS, each font is defined as an individual font-face declaration. If you write a new set of styles applying these extra font-face declarations to nested bold and italic elements, then the browser <em>still</em> applies faux styles, resulting in double-bold and double-italic text.</p>
+		<p class="demo">Lorem ipsum dolor <strong>bold sample</strong> sit <em>italic sample</em> amet consectetur adipisicing sed <strong><em>bold italic sample</em></strong> do eiusmod.</p>
+		<p class="demo unstyled">Lorem ipsum dolor <strong>bold sample</strong> sit <em>italic sample</em> amet consectetur adipisicing sed <strong><em>bold italic sample</em></strong> do eiusmod.</p>
+	</div>
+
+	<div class="wrong">
+		<h2>The Wrong Solution</h2>
+		<p>To overcome that problem, you add <code>font-weight:normal</code> and <code>font-style:normal</code> rules to your styles to avoid the double-styles, which works, but then if the font fails to load, the backup font styles have no bold or italic.</p>
+		<p class="demo">Lorem ipsum dolor <strong>bold sample</strong> sit <em>italic sample</em> amet consectetur adipisicing sed <strong><em>bold italic sample</em></strong> do eiusmod.</p>
+		<p class="demo unstyled">Lorem ipsum dolor <strong>bold sample</strong> sit <em>italic sample</em> amet consectetur adipisicing sed <strong><em>bold italic sample</em></strong> do eiusmod.</p>
+	</div>
+
+	<div class="right">
+		<h2>The Right Solution</h2>
+		<p>The solution is to change the font-face declarations to add styles to the same font-family, which tells the browser to use that font for nested bold and italic styles automatically, and then only rule you apply is the font-family. This solution results in true italic and bold styles, and if the font fails to load, the fallback font still gets proper bold and italic styles.</p>
+		<p class="demo">Lorem ipsum dolor <strong>bold sample</strong> sit <em>italic sample</em> amet consectetur adipisicing sed <strong><em>bold italic sample</em></strong> do eiusmod.</p>
+		<p class="demo unstyled">Lorem ipsum dolor <strong>bold sample</strong> sit <em>italic sample</em> amet consectetur adipisicing sed <strong><em>bold italic sample</em></strong> do eiusmod.</p>
+	</div>
+
+	<hr>
+
+	<p><small>This demo uses the <a href="http://www.fontsquirrel.com/fonts/ubuntu">Ubuntu</a> font, and the <code>@font-face</code> kit downloaded from <a href="http://www.fontsquirrel.com/">FontSquirrel</a>.</small></p>
+
+</body>
+</html>
