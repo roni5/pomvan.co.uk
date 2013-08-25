@@ -92,7 +92,7 @@ p {
     line-height: 16px;
     margin-bottom: 0;
     margin-top: 10px;
-    padding-bottom: 0;
+    padding: 0px 0px 0px 8px;
     text-transform: none;
 	font-family: 'the_hand_of_tesregular', Arial, sans-serif;
 	
