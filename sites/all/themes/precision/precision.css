@@ -1,7 +1,18 @@
 /* $Id: precision.css,v 1.1.2.1 2010/10/12 12:27:47 dixon Exp $  #F3F4EE  @import url("http://pom/sites/all/themes/precision/css Droid Sans */
 
+@font-face {
+    font-family: 'font-family: 'Droid Sans', sans-serif;';
+    src: url('droidsans-webfont.eot');
+    src: url('droidsans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('droidsans-webfont.woff') format('woff'),
+         url('droidsans-webfont.ttf') format('truetype'),
+         url('droidsans-webfont.svg#the_hand_of_tesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
+/*
 @font-face {
     font-family: 'the_hand_of_tesregular';
     src: url('the_hand_of_tes-webfont.eot');
@@ -13,6 +24,7 @@
     font-style: normal;
 
 }
+
 
 */
 
@@ -35,40 +47,68 @@ font:12px droidsans-webfont,sans-serif;
 
 #panel-titletext.panel-pane{
     color: #354B55; 
-    font-family: 'the_hand_of_tesregular' !important; 
+    font-family: 'Droid Sans' !important; 
     font-size: 38px;
     margin: 0px auto;
     padding-bottom: 0px;
-    text-transform: uppercase;
+    text-transform: none;
+   text-shadow: 0 2px 1px #FFFFFF;
 }
 
 h1, h2, h3, h4, h5, h6 {
-font-family:'the_hand_of_tesregular',Arial,sans-serif;
-font-weight:normal;
+font-family:'Droid Sans', sans-serif;
+font-weight:bold;
 margin:10px;
 padding:0;
 }
 h1 {
-    border-top: 2px solid #B62527;
-	border-bottom: 2px solid #B62527;
-	float:right;
-	position: relative; 
-	margin: 0px auto;
+   display: inline-block; 
+   border-top: 5px solid #EEEEEE;
+    border-bottom: 4px solid #EEEEEE;
+    animation-duration: 3s;
+    animation-name: slidein;
+    float:left;
+   background: #7bc4ed.; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMmViZjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #d4dbee  44%, #7bc4ed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4dbee ), color-stop(100%,##7bc4ed.)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, d4dbee  44%,##7bc4ed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #d4dbee  44%,#7bc4ed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #d4dbee  44%,#7bc4ed 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #d4dbee  44%,##7bc4ed 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#7bc4ed',GradientType=0 ); /* IE6-8 */ 
+    position: relative;
+      font-size: 40px;
+    line-height: 15px;
+    margin: 0 0 10px;
+    padding: 25px 80px 10px 96px; 
     color: #04547B;
-    font-family: the_hand_of_tesregular;
-    font-size: 37px;
-    line-height: 40px;
-    padding-bottom: 5px;
+    font-family: Droid Sans;
     text-transform: none;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #C9C9C9, 0 3px 0 #BBBBBB, 0 4px 0 #B9B9B9, 0 5px 0 #AAAAAA, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    /*text-shadow: 0 2px 1px #FFFFFF; */
 }
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 h2 {
-font-size:24px;
+font-size:14px;
 line-height:24px;
 }
 h3 {
-font-size:30px;
-line-height:24px;
-margin-bottom:15px;
+font-size:14px;
+line-height:23px;
+margin-bottom:14px;
 margin-top:10px;
 }
 h4 {
@@ -94,7 +134,7 @@ p {
     margin-top: 10px;
     padding: 0px 0px 0px 8px;
     text-transform: none;
-	font-family: 'the_hand_of_tesregular', Arial, sans-serif;
+	font-family: 'Droid Sans', sans-serif, Arial;
 	
 }
 div.odd {
@@ -251,29 +291,30 @@ tfoot th em {
 display:none;
 }*/
 
+
 /*  Main Section Panels CSS
-/************  background-color: #FFF;  background:url("sites/default/themes/precision/page-top.png") no-repeat scroll 0 0 #FFF; ***************************/
-/* background:url("sites/default/themes/precision/batthern.png") 
+/************  background-color: #FFF;  background:url("sites/default/themes/precision/page-top.png") no-repeat$
+/* background:url("sites/default/themes/precision/batthern.png")
      background-repeat: repeat-x; */
 #panel-header.panel-pane {
 
     margin: 0px auto ;
     padding: 0px 0px 0px 0px;
     width: 980px;
-    height: 89px;	
-	border-left: 10px solid #C5C6D1;
-	border-right: 10px solid #C5C6D1;
-	border-top: 10px solid #000000;
+    height: 89px;
+        border-left: 10px solid #999999;
+        border-right: 10px solid #999999;
+        border-top: 10px solid #999999;
 
 }
 
 #panel-header.panel-pane {
-	-moz-border-radius-topleft:32px;
-	 border-top-left-radius: 32px;
-	 border-top-right-radius:32px;
-	-moz-border-radius-topright:32px;
-	-webkit-border-top-left-radius:32px;
-	-webkit-border-top-right-radius:32px;
+	-moz-border-radius-topleft:30px;
+	 border-top-left-radius: 30px;
+	 border-top-right-radius:30px;
+	-moz-border-radius-topright:30px;
+	-webkit-border-top-left-radius:30px;
+	-webkit-border-top-right-radius:30px;
 }
 
 
@@ -289,6 +330,8 @@ display:none;
 }
 #panel-toptext.panel-pane {
     float:right;
+    margin-left: -0px;
+    margin-right: -115px;
  
 }
  /*  'Droid sans',sans-serif */
@@ -303,13 +346,13 @@ display:none;
 	border-right: 10px solid #9dbc93;
 }
 
-/*      background:url("sites/default/themes/precision/batthern.png.png") background-repeat: repeat-x;*/
+
 #panel-content.panel-pane {
   
     
 	background-color: #FFFFFF;   
-    border-left: 10px solid #C5C6D1;
-    border-right: 10px solid #C5C6D1;
+    border-left: 10px solid #999999;
+    border-right: 10px solid #999999;
     margin: 0px auto ;
     min-height: 300px;
     padding: 0px;
@@ -411,18 +454,24 @@ display:none;
 #panel-footer.panel-pane {
     background-color: #EEEEEE;
     font-size: 12px;
-    margin: -10px auto 0;
+    margin: 0px auto 0;
     padding: 25px;
-    width: 950px;
-	border-left: 10px solid #C5C6D1;
-    border-right: 10px solid #C5C6D1;
-	border-bottom: 10px solid #C5C6D1;
-	
-	-moz-border-radius-bottomleft:0ex;
-	-moz-border-radius-bottomright:0ex;
-	-webkit-border-bottom-left-radius:0ex;
-	-webkit-border-bottom-right-radius:0ex;
+    width: 930px;
+	border-left: 10px solid #999999;
+         border-right: 10px solid #999999;
 }
+    
+#panel-footer.panel-pane {    
+             border-bottom-left-radius: 30px;
+             border-bottom-right-radius: 30px;
+             border-bottom: 10px solid #999999;
+        -moz-border-radius-bottomleft:30px;
+        -moz-border-radius-bottomright:30px;
+        -webkit-border-bottom-left-radius:30px;
+        -webkit-border-bottom-right-radius:30px;
+        
+}
+
 
 #panel-footer.panel-pane p{
 	padding-left: 0px
@@ -456,7 +505,7 @@ display:none;
     background-color: #EFF7EB;
     border-left: 10px solid #9DBC93;
     border-right: 10px solid #9DBC93;
-    border-top: 1px dashed #BBBBBB;
+    border-top: 1px solid #BBBBBB;
     font-size: 12px;
     height: 185px;
     margin: -10px auto 0;
@@ -482,61 +531,72 @@ display:none;
     list-style-type: none !important;
     padding-left: 26px;
     padding-top: 0px;
-	
+    text-shadow: 0 2px 1px #FFFFFF;	
 }
 
 #panel-menu.panel-pane ul.links li {
     display: none;
 	
 }
-/* #9394A5    background:url("sites/default/themes/precision/page-mid.png") no-repeat scroll 0 0 #EEEEEE;                       */
-/*     background:url("sites/default/themes/precision/batthern.png.png") 
-    background-repeat: repeat-x;    ... background: none repeat scroll 0 0 #3E3E3E;   ... background: -moz-linear-gradient(top, #9394A5, #EEE);*/
- /*   background: none repeat scroll 0 0 #3E3E3E; */      
+     
 #panel-menu.panel-pane {
-     text-decoration: none;
+         text-decoration: none;
 	 background: none repeat scroll 0 0 transparent;
-    font-family: "droid sans",,Arial,sans-serif;
-	border-left: 10px solid #000000;
-	border-right: 10px solid #000000;
-    height: 40px;
-    margin: -1px auto;
-    padding-top: 7px;
-    width: 980px;
-	clear: both;
-	
-	
+         font-family: 'Droid sans',Arial,sans-serif;
+	 font-weight:400;
+	 border-left: 10px solid #999999;
+	 border-right:10px solid #999999;
+    	 height: 42px;
+    	 margin: -1px auto;
+    	 padding-top: 1px;
+    	 width: 980px;
+	 clear: both;
+		
 }
 #panel-menu.panel-pane ul li {
-    text-decoration: none;
+     margin-bottom: 5px;
+    background-color: #BCCEFF;
+    text-align: center;
     float: left;
-    padding-right: 1em;
-    margin-right: 1em;
-    border-right: 2px solid #FFF;
-    height: 20px;
-    line-height: 8px;
+    margin-right: 0px;
+    border: 5px solid #606060;
+	-webkit-border-radius: 20px;
+        -moz-border-radius: 20px; 		
+       border-radius: 20px;
+    box-shadow: 08px 08px 4px #888888;    
+    height: 22px;
+    line-height: 20px;
+    padding: 8px;
+    text-decoration: none;
+
 }
 
 #panel-menu.panel-pane ul li:last-child {
-    border-right: none;
 	text-decoration: none;
 }
 	
 #panel-menu.panel-pane ul li a {
-    color: #FFFFF;
+    color:  #004472;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 18px;
 	line-height:18px;
 }
 #panel-menu.panel-pane ul li a:hover {
-    color: #9DBC93;
+          font-size: 21px;
+          color:#B62527 ;
+
+	transition: all 0.2s ease-out 0s;
+	transform:scale(2,4);
+-ms-transform:scale(2,4); /* IE 9 */
+-webkit-transform:scale(2,4); /* Safari and Chrome */ 
+  
 }
 
 #panel-menu.panel-pane ul a.active {
      border: 1px solid #CCC;
     color: #000000;
-	background: #82CEFF;
+    background: #bcceff;
 }
 
 /*  Services Menu CSS  overflow:hidden;
@@ -617,4 +677,5 @@ display:none;
 	
 /*  Text Panel CSS */
  
+
 
